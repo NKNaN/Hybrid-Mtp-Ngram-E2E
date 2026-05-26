@@ -50,39 +50,6 @@ export FD_METRICS_PORT=8233
 export FD_CACHE_QUEUE_PORT=8333
 ```
 
-## 公共 benchmark 命令（9 种配置共用）
-
-每次起完服务等就绪后，跑下面同一条命令，把 `--model` 后的标签改成对应配置名（影响结果保存的文件名）：
-
-```bash
-python benchmarks/benchmark_serving.py \
-  --backend openai-chat \
-  --model <CONFIG_NAME>           # 改成 non-spec / ngram / mtp-1 / mtp-3 / mtp3-hybrid \
-  --endpoint /v1/chat/completions \
-  --host 0.0.0.0 \
-  --port ${FD_API_PORT} \
-  --dataset-name EBChat \
-  --dataset-path ./filtered_sharedgpt_2000_input_1136_output_200_fd.json \
-  --percentile-metrics ttft,tpot,itl,e2el,s_ttft,s_itl,s_e2el,s_decode,input_len,s_input_len,output_len \
-  --metric-percentiles 80,95,99,99.9,99.95,99.99 \
-  --num-prompts 2000 \
-  --max-concurrency 100 \
-  --save-result > infer_<CONFIG_NAME>.log 2>&1
-```
-
-
-## 接受率统计（仅投机解码配置）
-
-每次跑完后，从 `log/speculate.log` 提取**最后一次**的全局接受率：
-
-```bash
-# 全局接受率（最后一行 Speculate global accept ratio）
-tail -n 200 log/speculate.log | grep "Speculate global accept ratio" | tail -1
-
-# 各 head 接受率（仅 MTP 配置有此输出）
-tail -n 200 log/speculate.log | grep "Single head accept ratio" | tail -1
-```
-
 ---
 
 ## 配置 1：non-spec（基线）
@@ -798,7 +765,7 @@ Single head accept ratio:      [0.8062, 0.6660, 0.6121, 0.5066, 0.7154]
 
 ### 1. 功能正确性
 
-9 种配置在 H800×1、wint4、TP=2、并发 100 下全部跑通 2000/2000 请求。ngram / MTP / Hybrid MTP-Ngram 三类投机解码路径功能均验证通过。
+9 种配置在 H800×1、wint4、TP=1、并发 100 下全部跑通 2000/2000 请求。ngram / MTP / Hybrid MTP-Ngram 三类投机解码路径功能均验证通过。
 
 ### 2. 性能加速比
 
