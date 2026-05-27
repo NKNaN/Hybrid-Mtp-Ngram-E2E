@@ -160,32 +160,32 @@ python benchmark_serving.py \
 | 指标 | 值 | vs non-spec | vs mtp-3 |
 |---|---|---|---|
 | Successful requests | 2000 | — | — |
-| Benchmark duration (s) | 727.38 | 1.22× | 1.98× |
+| Benchmark duration (s) | 749.66 | 1.26× | 2.04× |
 | Total input tokens | 2,541,341 | — | — |
-| Total generated tokens | 1,985,786 | 1.02× | 0.99× |
-| Request throughput (req/s) | 2.750 | 0.82× | 0.51× |
-| Output token throughput (tok/s) | 2730.04 | 0.83× | 0.50× |
-| Total token throughput (tok/s) | 6223.85 | 0.82× | 0.50× |
-| Mean TTFT (ms) | 314.10 | 1.06× | 0.77× |
-| Median TTFT (ms) | 141.96 | 1.21× | 0.70× |
-| P99 TTFT (ms) | 4837.37 | 0.96× | 0.85× |
-| Mean TPOT (ms) | 35.41 | 1.21× | 1.87× |
-| Median TPOT (ms) | 37.11 | 1.32× | 2.07× |
-| P99 TPOT (ms) | 49.66 | 1.07× | 1.43× |
-| Mean ITL (ms) | 37.56 | 1.31× | 0.80× |
-| Median ITL (ms) | 37.82 | 1.39× | 0.86× |
-| P99 ITL (ms) | 63.50 | 1.11× | 0.69× |
-| Mean E2EL (ms) | 34106.17 | 1.21× | 1.93× |
-| Median E2EL (ms) | 26671.02 | 1.09× | 1.73× |
-| P99 E2EL (ms) | 126715.05 | 1.46× | 2.32× |
+| Total generated tokens | 1,991,901 | 1.02× | 1.00× |
+| Request throughput (req/s) | 2.668 | 0.79× | 0.49× |
+| Output token throughput (tok/s) | 2657.08 | 0.81× | 0.49× |
+| Total token throughput (tok/s) | 6047.08 | 0.80× | 0.49× |
+| Mean TTFT (ms) | 331.95 | 1.12× | 0.81× |
+| Median TTFT (ms) | 152.11 | 1.30× | 0.75× |
+| P99 TTFT (ms) | 5362.70 | 1.06× | 0.94× |
+| Mean TPOT (ms) | 36.37 | 1.25× | 1.92× |
+| Median TPOT (ms) | 38.30 | 1.37× | 2.14× |
+| P99 TPOT (ms) | 48.23 | 1.04× | 1.39× |
+| Mean ITL (ms) | 39.17 | 1.36× | 0.83× |
+| Median ITL (ms) | 38.60 | 1.42× | 0.88× |
+| P99 ITL (ms) | 64.69 | 1.13× | 0.71× |
+| Mean E2EL (ms) | 35197.36 | 1.25× | 2.00× |
+| Median E2EL (ms) | 28527.63 | 1.17× | 1.85× |
+| P99 E2EL (ms) | 123820.53 | 1.43× | 2.27× |
 
 ### 接受率
 
 ```
-Speculate global accept ratio: 0.1055
-total step:                    880796
-total output token num:        984636
-average accept len:            1.1179
+Speculate global accept ratio: 0.1206
+total step:                    872927
+total output token num:        992687
+average accept len:            1.1372
 ```
 
 ---
@@ -233,32 +233,32 @@ python benchmark_serving.py \
 | 指标 | 值 | vs non-spec |
 |---|---|---|
 | Successful requests | 2000 | — |
-| Benchmark duration (s) | 828.98 | 1.39× |
+| Benchmark duration (s) | 924.53 | 1.56× |
 | Total input tokens | 2,541,341 | — |
-| Total generated tokens | 1,925,430 | 0.99× |
-| Request throughput (req/s) | 2.413 | 0.72× |
-| Output token throughput (tok/s) | 2322.64 | 0.71× |
-| Total token throughput (tok/s) | 5388.26 | 0.71× |
-| Mean TTFT (ms) | 298.70 | 1.01× |
-| Median TTFT (ms) | 163.94 | 1.40× |
-| P99 TTFT (ms) | 4538.73 | 0.90× |
-| Mean TPOT (ms) | 42.35 | 1.45× |
-| Median TPOT (ms) | 43.89 | 1.57× |
-| P99 TPOT (ms) | 55.85 | 1.21× |
-| Mean ITL (ms) | 44.26 | 1.54× |
-| Median ITL (ms) | 44.91 | 1.66× |
-| P99 ITL (ms) | 71.37 | 1.25× |
-| Mean E2EL (ms) | 40182.21 | 1.42× |
-| Median E2EL (ms) | 33447.94 | 1.37× |
-| P99 E2EL (ms) | 137686.54 | 1.58× |
+| Total generated tokens | 1,962,190 | 1.01× |
+| Request throughput (req/s) | 2.163 | 0.64× |
+| Output token throughput (tok/s) | 2122.37 | 0.65× |
+| Total token throughput (tok/s) | 4871.16 | 0.64× |
+| Mean TTFT (ms) | 353.52 | 1.19× |
+| Median TTFT (ms) | 186.35 | 1.59× |
+| P99 TTFT (ms) | 5232.87 | 1.04× |
+| Mean TPOT (ms) | 45.06 | 1.54× |
+| Median TPOT (ms) | 46.98 | 1.68× |
+| P99 TPOT (ms) | 54.05 | 1.17× |
+| Mean ITL (ms) | 47.77 | 1.66× |
+| Median ITL (ms) | 47.17 | 1.74× |
+| P99 ITL (ms) | 73.24 | 1.28× |
+| Mean E2EL (ms) | 43155.87 | 1.53× |
+| Median E2EL (ms) | 36650.22 | 1.50× |
+| P99 E2EL (ms) | 151590.33 | 1.74× |
 
 ### 接受率
 
 ```
-Speculate global accept ratio: 0.07183
-total step:                    859225
-total output token num:        925722
-average accept len:            1.0774
+Speculate global accept ratio: 0.1020
+total step:                    864285
+total output token num:        962403
+average accept len:            1.1135
 ```
 
 ---
@@ -735,8 +735,8 @@ Single head accept ratio:      [0.8062, 0.6660, 0.6121, 0.5066, 0.7154]
 | # | 配置 | Output tok/s | Mean TTFT (ms) | Mean TPOT (ms) | Mean E2EL (ms) | 相对 non-spec 加速比 |
 |---|---|---|---|---|---|---|
 | 1 | non-spec | 3280.47 | 296.59 | 29.19 | 28270.04 | 1.00× |
-| 2 | ngram-3 | 2730.04 | 314.10 | 35.41 | 34106.17 | 0.83× |
-| 3 | ngram-5 | 2322.64 | 298.70 | 42.35 | 40182.21 | 0.71× |
+| 2 | ngram-3 | 2657.08 | 331.95 | 36.37 | 35197.36 | 0.81× |
+| 3 | ngram-5 | 2122.37 | 353.52 | 45.06 | 43155.87 | 0.65× |
 | 4 | mtp-1 | 3959.58 | 415.30 | 24.48 | 23071.41 | 1.21× |
 | 5 | **mtp-3** | **5437.34** | 409.94 | **18.91** | **17633.78** | **1.66×** |
 | 6 | mtp-5 | 3795.00 | 502.05 | 25.82 | 23542.52 | 1.16× |
@@ -748,8 +748,8 @@ Single head accept ratio:      [0.8062, 0.6660, 0.6121, 0.5066, 0.7154]
 
 | # | 配置 | global accept ratio | average accept len | Single head accept ratio |
 |---|---|---|---|---|
-| 2 | ngram-3 | 0.1055 | 1.118 | N/A |
-| 3 | ngram-5 | 0.0718 | 1.077 | N/A |
+| 2 | ngram-3 | 0.1206 | 1.137 | N/A |
+| 3 | ngram-5 | 0.1020 | 1.114 | N/A |
 | 4 | mtp-1 | 0.4570 | 1.842 | [0.840] |
 | 5 | mtp-3 | 0.6309 | 2.709 | [0.817, 0.675, 0.619] |
 | 6 | mtp-5 | 0.6627 | 2.965 | [0.807, 0.660, 0.607, 0.589, 0.579] |
@@ -773,13 +773,13 @@ Single head accept ratio:      [0.8062, 0.6660, 0.6121, 0.5066, 0.7154]
 
 ```
 mtp-3 (1.66×)  >  mtp1+ngram2 (1.57×)  >  mtp3+ngram2 (1.29×)  >  mtp3+ngram1 (1.23×)
-  >  mtp-1 (1.21×)  >  mtp-5 (1.16×)  >  non-spec (1.00×)  >  ngram-3 (0.83×)  >  ngram-5 (0.71×)
+  >  mtp-1 (1.21×)  >  mtp-5 (1.16×)  >  non-spec (1.00×)  >  ngram-3 (0.81×)  >  ngram-5 (0.65×)
 ```
 
 几个关键观察：
 
 - **mtp 推 3 步最优**：mtp-3 的 1.66× 是所有配置里最高的。继续加到 5 步（mtp-5）反而退化到 1.16×，因为草稿 head 的边际接受率快速下降（第 4、5 个 head 接受率分别只有 0.59、0.58），多算的两步成本超过收益。
-- **纯 ngram 在 sharedgpt 上是负收益**：ngram-3 / ngram-5 全局接受率仅 0.10 / 0.07，draft slot 多但命中少，每步多 verify 的开销没赚回来。这是 sharedgpt 这种"非重复性强"的对话数据集的固有限制。
+- **纯 ngram 在 sharedgpt 上是负收益**：ngram-3 / ngram-5 全局接受率仅 0.12 / 0.10，draft slot 多但命中少，每步多 verify 的开销没赚回来。这是 sharedgpt 这种"非重复性强"的对话数据集的固有限制。
 - **mtp1+ngram2 是意外亮点**：1.57× 接近 mtp-3 的 1.66×，且 Mean E2EL（17472ms）甚至略低于 mtp-3（17634ms）。每步只跑 1 个 MTP forward + 2 个 ngram 补，**算力开销显著低于 mtp-3 的 3 步 MTP**，对算力受限场景特别有价值。
 
 ### 3. Hybrid MTP-Ngram 的有效性
